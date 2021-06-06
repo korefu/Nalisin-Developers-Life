@@ -13,6 +13,7 @@ class EntryViewModel: ViewModel() {
     var pos = MutableLiveData(0)
     var lastPage = 0
     val entriesNetworkState = MutableLiveData<String>()
+    val imageNetworkState = MutableLiveData<String>()
 
     suspend fun loadEntries(index: Int) {
         entriesNetworkState.value = "loading"

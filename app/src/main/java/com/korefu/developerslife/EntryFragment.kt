@@ -86,7 +86,30 @@ class EntryFragment : Fragment() {
                         networkErrorLinearLayout.visibility = View.VISIBLE
                         imageView.visibility = View.GONE
 
-                    } else Toast.makeText(requireContext(), getString(R.string.toast_network_error), Toast.LENGTH_SHORT).show()
+                    } else Toast.makeText(
+                        requireContext(),
+                        getString(R.string.toast_network_error),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+        })
+        viewModel.imageNetworkState.observe(viewLifecycleOwner, { text ->
+            when (text) {
+                "success" -> {
+                    progressBar.visibility = View.GONE
+                    imageView.visibility = View.VISIBLE
+                    networkErrorLinearLayout.visibility = View.GONE
+                }
+                "loading" -> {
+                    progressBar.visibility = View.VISIBLE
+                    imageView.visibility = View.GONE
+                    networkErrorLinearLayout.visibility = View.GONE
+                }
+                "failure" -> {
+                    progressBar.visibility = View.GONE
+                    networkErrorLinearLayout.visibility = View.VISIBLE
+                    networkTextView.text = getString(R.string.networkErrorMessage)
                 }
             }
         })
@@ -106,10 +129,7 @@ class EntryFragment : Fragment() {
             }
             return
         }
-        progressBar.visibility = View.VISIBLE
-        networkErrorLinearLayout.visibility = View.GONE
-        imageView.visibility = View.GONE
-        networkTextView.text = getString(R.string.networkErrorMessage)
+        viewModel.imageNetworkState.value = "loading"
         Glide.with(this)
             .asGif()
             .load(viewModel.entryList[pos].gifURL)
@@ -120,8 +140,7 @@ class EntryFragment : Fragment() {
                     target: Target<GifDrawable>?,
                     isFirstResource: Boolean
                 ): Boolean {
-                    progressBar.visibility = View.GONE
-                    networkErrorLinearLayout.visibility = View.VISIBLE
+                    viewModel.imageNetworkState.value = "failure"
                     return false
                 }
 
@@ -132,8 +151,7 @@ class EntryFragment : Fragment() {
                     dataSource: DataSource?,
                     isFirstResource: Boolean
                 ): Boolean {
-                    progressBar.visibility = View.GONE
-                    imageView.visibility = View.VISIBLE
+                    viewModel.imageNetworkState.value = "success"
                     return false
                 }
 
