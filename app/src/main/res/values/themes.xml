@@ -16,7 +16,12 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="AppThemeSpecificBackground" parent="Theme.DevelopersLife">
+    <style name="AppThemeSpecificImageBackground" parent="Theme.DevelopersLife">
         <item name="android:background">@color/white</item>
     </style>
+
+    <style name="AppThemeSpecificLayoutBackground" parent="Theme.DevelopersLife">
+        <item name="android:background">#F4F4F4</item>
+    </style>
+
 </resources>

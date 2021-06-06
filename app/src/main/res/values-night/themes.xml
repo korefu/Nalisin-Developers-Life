@@ -15,7 +15,10 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-    <style name="AppThemeSpecificBackground" parent="Theme.DevelopersLife">
+
+    <style name="AppThemeSpecificImageBackground" parent="Theme.DevelopersLife">
         <item name="android:background">#202020</item>
     </style>
+
+    <style name="AppThemeSpecificLayoutBackground" parent="Theme.DevelopersLife" />
 </resources>
