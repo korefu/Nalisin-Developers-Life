@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Developers Life</string>
+    <string name="tabLatest">Последние</string>
+    <string name="tabTop">Лучшие</string>
+    <string name="tabHot">Горячие</string>
+    <string name="networkErrorMessage">Произошла ошибка при загрузке данных. Проверьте подключение к сети.</string>
+    <string name="noMoreGifs">Кажется, здесь гифок нет.</string>
+    <string name="retry">Повторить</string>
+    <string name="toast_network_error">Ошибка сети</string>
+</resources>
