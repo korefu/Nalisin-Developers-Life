@@ -28,8 +28,6 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:tabIndicatorHeight="0dp"
-            app:tabMode="scrollable"
-            android:textSize="24sp"
             app:tabTextAppearance="@style/title_text"
             android:elevation="0dp"/>
 

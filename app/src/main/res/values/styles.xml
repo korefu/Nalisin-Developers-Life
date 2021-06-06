@@ -4,5 +4,6 @@
     <style name="title_text" parent="TextAppearance.AppCompat.Title">
         <item name="maxLines">1</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
     </style>
 </resources>
