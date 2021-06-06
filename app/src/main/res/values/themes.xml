@@ -3,10 +3,9 @@
     <style name="Theme.DevelopersLife" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryVariant">#f0f4f7</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnPrimary">#2196F3</item>
         <item name="colorOnSurface">@color/black</item>
         <item name="android:windowLightStatusBar">true</item>
-        <item name="android:buttonStyle">@style/BlackButton</item>
         <item name="android:textColor">@color/black</item>
         <item name="colorSecondary">@color/white</item>
         <item name="colorSecondaryVariant">@color/white</item>

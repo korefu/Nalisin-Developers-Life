@@ -109,11 +109,11 @@ class EntryFragment : Fragment() {
                 "failure" -> {
                     progressBar.visibility = View.GONE
                     networkErrorLinearLayout.visibility = View.VISIBLE
+                    imageView.visibility = View.GONE
                     networkTextView.text = getString(R.string.networkErrorMessage)
                 }
             }
         })
-
         return binding.root
     }
 

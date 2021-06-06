@@ -2,11 +2,11 @@
     <!-- Base application theme. -->
     <style name="Theme.DevelopersLife" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#535159</item>
-        <item name="colorPrimaryVariant">#323035</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">#17212b</item>
+        <item name="colorPrimaryVariant">#111922</item>
+        <item name="colorOnPrimary">#50B0FD</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">#535159</item>
+        <item name="colorSecondary">#2b5278</item>
         <item name="colorSecondaryVariant">#37363A</item>
         <item name="colorOnSecondary">@color/white</item>
 
